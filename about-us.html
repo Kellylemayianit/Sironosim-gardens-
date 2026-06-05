@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us &amp; Catering Menu — Sironosim Gardens Hotel</title>
+  <meta name="description" content="Learn about Sironosim Gardens Hotel and browse our catering menu. Add meals to your cart and order via WhatsApp." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-main">Sironosim Gardens</span>
+      <span class="logo-sub">Hotel &amp; Catering · Kimana</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Rooms</a>
+      <a href="about-us.html" class="active">About &amp; Menu</a>
+      <a href="contacts.html">Contact</a>
+    </nav>
+
+    <button class="cart-btn" data-action="open-cart" aria-label="Open cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.874-7.148a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+      </svg>
+      Cart
+      <span class="cart-badge" aria-live="polite">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- CART -->
+<div class="cart-overlay" role="dialog" aria-modal="true" aria-label="Shopping cart"></div>
+<aside class="cart-modal">
+  <div class="cart-modal-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" data-action="close-cart" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items-list"></div>
+  <div class="cart-modal-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong class="cart-total-amount">KES 0</strong>
+    </div>
+    <div class="cart-actions">
+      <button class="btn btn-whatsapp btn-checkout" data-action="checkout" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.849L.057 23.535a.563.563 0 00.677.677l5.687-1.471A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.027-1.383l-.36-.214-3.742.968.993-3.626-.236-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Order via WhatsApp
+      </button>
+      <button class="btn-clear" data-action="clear-cart">Clear cart</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════════════════════════════════════
+     PAGE BANNER
+══════════════════════════════════════════ -->
+<section class="page-banner" aria-label="About us banner">
+  <div class="page-banner-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80');" role="img" aria-label="Beautifully plated Kenyan cuisine"></div>
+  <div class="container">
+    <div class="page-banner-content">
+      <p class="section-label">Our Story &amp; Catering</p>
+      <h1>Good food, <em>real warmth,</em><br>honest hospitality</h1>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     OUR STORY
+══════════════════════════════════════════ -->
+<section class="section" aria-labelledby="story-title">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img-stack" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=600&q=75"
+             alt="Hotel garden courtyard" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=500&q=75"
+             alt="Chef preparing food in kitchen" loading="lazy" />
+      </div>
+      <div class="story-text">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title" id="story-title">Born in <em>Kimana,</em><br>rooted in community</h2>
+        <p>Sironosim Gardens Hotel started as a family dream — a place where travellers heading to Amboseli could rest, eat well, and feel genuinely cared for. Since opening our gates, we have grown from a modest guesthouse into a full-service hotel with comfortable accommodation and a catering team we are deeply proud of.</p>
+        <p>Our kitchen is led by local cooks who know how Kenyan food should taste — bold, generous, and made with ingredients sourced from the Kimana area whenever possible. Whether you are staying overnight or hiring us for an event, every meal is prepared fresh.</p>
+        <p>We also offer off-site catering for weddings, funerals, corporate gatherings, and community events throughout Kajiado County. Send us your requirements on WhatsApp and we will build a custom menu around your budget and occasion.</p>
+        <a href="contacts.html" class="btn btn-primary" style="margin-top:var(--sp-md);">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CATERING SERVICES INTRO
+══════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="catering-title">
+  <div class="container">
+    <header class="section-header">
+      <p class="section-label">Catering Services</p>
+      <h2 class="section-title" id="catering-title">We cook for <em>every occasion</em></h2>
+      <p>From intimate in-hotel dining to large outdoor events, our catering team handles it all. Below are our most popular packages — add any to your cart and send us the order directly on WhatsApp.</p>
+    </header>
+    <div class="features-strip">
+      <div class="feature-item">
+        <span class="feature-icon">🎊</span>
+        <h4>Weddings &amp; Celebrations</h4>
+        <p>Full buffet setup, serving staff, and custom decor consultation.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🏢</span>
+        <h4>Corporate Events</h4>
+        <p>Tea, lunch, and dinner packages for meetings, retreats, and trainings.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">⛪</span>
+        <h4>Funerals &amp; Harambees</h4>
+        <p>Large-scale cooking with portable equipment; we come to you.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🏨</span>
+        <h4>In-Hotel Dining</h4>
+        <p>Breakfast, lunch, and dinner served daily to residents and walk-ins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FEATURED MEALS GRID
+══════════════════════════════════════════ -->
+<section class="section" id="menu" aria-labelledby="menu-title">
+  <div class="container">
+    <header class="section-header">
+      <p class="section-label">Featured Meals</p>
+      <h2 class="section-title" id="menu-title">Our <em>WhatsApp</em> Catalogue</h2>
+      <p>Browse our most-ordered dishes. Click <strong>Add to Menu</strong> to build your catering order, then checkout directly on WhatsApp.</p>
+    </header>
+
+    <!-- ── Breakfasts ───────────────────────── -->
+    <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:var(--sp-md);color:var(--clr-clay);">🌅 Breakfasts</h3>
+    <div class="meals-grid" style="margin-bottom:var(--sp-xl);">
+
+      <article class="meal-card" data-item
+        data-item-id="meal-full-breakfast"
+        data-item-name="Full Kenyan Breakfast"
+        data-item-price="450"
+        data-item-img="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&q=75"
+        data-item-note="Eggs, mandazi, uji, tea/coffee">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&q=75" alt="Full Kenyan breakfast spread" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Breakfast</p>
+          <h3 class="card-title">Full Kenyan Breakfast</h3>
+          <p class="card-desc">Eggs your way, warm mandazi, uji porridge, and a choice of tea or coffee.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 450 <small>/ person</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="meal-fruit-platter"
+        data-item-name="Seasonal Fruit Platter"
+        data-item-price="300"
+        data-item-img="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=500&q=75"
+        data-item-note="Fresh local fruits · serves 2">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=500&q=75" alt="Fresh fruit platter" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Breakfast</p>
+          <h3 class="card-title">Seasonal Fruit Platter</h3>
+          <p class="card-desc">A generous plate of locally sourced fresh fruit — mango, pawpaw, watermelon, and more.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 300 <small>/ platter</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Lunch & Dinner ──────────────────── -->
+    <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:var(--sp-md);color:var(--clr-clay);">🍽️ Lunch &amp; Dinner</h3>
+    <div class="meals-grid" style="margin-bottom:var(--sp-xl);">
+
+      <article class="meal-card" data-item
+        data-item-id="meal-nyama-choma"
+        data-item-name="Nyama Choma (Goat)"
+        data-item-price="900"
+        data-item-img="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=75"
+        data-item-note="500g grilled goat · served with kachumbari">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=75" alt="Nyama choma grilled meat" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Main Course</p>
+          <h3 class="card-title">Nyama Choma — Goat</h3>
+          <p class="card-desc">500g of expertly grilled goat, served with kachumbari tomato salad and ugali or chapati on the side.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 900 <small>/ 500g</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="meal-pilau"
+        data-item-name="Pilau with Beef"
+        data-item-price="600"
+        data-item-img="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=75"
+        data-item-note="Spiced rice · full plate">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=75" alt="Pilau rice with beef" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Main Course</p>
+          <h3 class="card-title">Pilau with Beef</h3>
+          <p class="card-desc">Fragrant spiced pilau rice slow-cooked with tender beef — a Kimana kitchen staple made fresh daily.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 600 <small>/ plate</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="meal-mukimo"
+        data-item-name="Mukimo &amp; Stew"
+        data-item-price="500"
+        data-item-img="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=75"
+        data-item-note="Traditional mashed greens &amp; potato">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=75" alt="Mukimo and beef stew" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Main Course</p>
+          <h3 class="card-title">Mukimo &amp; Stew</h3>
+          <p class="card-desc">Mashed peas, potato, and maize greens served alongside a rich beef or chicken stew. Home cooking at its finest.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 500 <small>/ plate</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="meal-tilapia"
+        data-item-name="Fried Tilapia"
+        data-item-price="750"
+        data-item-img="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&q=75"
+        data-item-note="Whole fish · ugali &amp; sukuma">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&q=75" alt="Fried tilapia with ugali" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Main Course</p>
+          <h3 class="card-title">Fried Tilapia</h3>
+          <p class="card-desc">Whole crispy-fried tilapia seasoned with spices, served with ugali and sautéed sukuma wiki.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 750 <small>/ serving</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="meal-chicken-roast"
+        data-item-name="Quarter Roast Chicken"
+        data-item-price="650"
+        data-item-img="https://images.unsplash.com/photo-1598103442097-8b74394b95c2?w=500&q=75"
+        data-item-note="With chips or ugali">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c2?w=500&q=75" alt="Roast chicken quarter" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Main Course</p>
+          <h3 class="card-title">Quarter Roast Chicken</h3>
+          <p class="card-desc">Juicy roast chicken quarter marinated in our house blend, served with your choice of chips or ugali.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 650 <small>/ quarter</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="meal-veggie-stew"
+        data-item-name="Vegetable Stew &amp; Rice"
+        data-item-price="380"
+        data-item-img="https://images.unsplash.com/photo-1547592180-85f173990554?w=500&q=75"
+        data-item-note="Vegan option">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500&q=75" alt="Vegetable stew with rice" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Vegetarian</p>
+          <h3 class="card-title">Vegetable Stew &amp; Rice</h3>
+          <p class="card-desc">A hearty mixed vegetable stew in tomato and coconut base, served with steamed white rice.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 380 <small>/ plate</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Catering Packages ───────────────── -->
+    <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:var(--sp-md);color:var(--clr-clay);">🎉 Event Catering Packages</h3>
+    <div class="meals-grid">
+
+      <article class="meal-card" data-item
+        data-item-id="pkg-buffet-basic"
+        data-item-name="Basic Buffet Package"
+        data-item-price="800"
+        data-item-img="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=75"
+        data-item-note="Per person · min 20 pax · rice, stew, salad, drinks">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=75" alt="Buffet table setup" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Event Package</p>
+          <h3 class="card-title">Basic Buffet</h3>
+          <p class="card-desc">Rice, stew (beef or chicken), salad, and soft drinks. Minimum 20 persons. Includes serving staff.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 800 <small>/ person</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="pkg-buffet-premium"
+        data-item-name="Premium Buffet Package"
+        data-item-price="1400"
+        data-item-img="https://images.unsplash.com/photo-1555244162-803834f70033?w=500&q=75"
+        data-item-note="Per person · min 30 pax · 3 mains, 2 sides, nyama choma, dessert">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=500&q=75" alt="Premium buffet spread" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Event Package</p>
+          <h3 class="card-title">Premium Buffet</h3>
+          <p class="card-desc">3 main courses, 2 side dishes, nyama choma station, dessert, and soft drinks. Full serving team included.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 1,400 <small>/ person</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="meal-card" data-item
+        data-item-id="pkg-tea-break"
+        data-item-name="Tea Break Package"
+        data-item-price="250"
+        data-item-img="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&q=75"
+        data-item-note="Per person · mandazi, samosa, tea/coffee">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&q=75" alt="Tea break snacks" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="meal-tag">Tea Break</p>
+          <h3 class="card-title">Tea Break Package</h3>
+          <p class="card-desc">Mandazi, samosas, biscuits, and a choice of tea or coffee. Ideal for morning or afternoon breaks at events.</p>
+          <div class="card-meta">
+            <span class="card-price">KES 250 <small>/ person</small></span>
+            <button class="btn btn-primary" data-action="add-to-cart">+ Add to Menu</button>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /meals-grid -->
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:var(--sp-xl);padding:var(--sp-xl);background:var(--clr-sand);border-radius:var(--r-lg);">
+      <p class="section-label">Custom Order</p>
+      <h3 style="font-family:var(--font-display);font-size:2rem;font-weight:300;margin-bottom:var(--sp-sm);">Don't see what you need?</h3>
+      <p style="color:var(--clr-bark);margin-bottom:var(--sp-md);max-width:480px;margin-inline:auto;">We build custom menus for any occasion. Send us a WhatsApp with your event date, number of guests, and budget — we'll take it from there.</p>
+      <button class="wa-cta-big" data-action="chat-with-us">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.849L.057 23.535a.563.563 0 00.677.677l5.687-1.471A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.027-1.383l-.36-.214-3.742.968.993-3.626-.236-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Chat &amp; Build Your Menu
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="site-logo">
+          <span class="logo-main">Sironosim Gardens</span>
+          <span class="logo-sub">Hotel &amp; Catering · Kimana</span>
+        </div>
+        <p>A warm, garden-wrapped retreat in the heart of Kimana, Kajiado County — your home before and after the wild.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Rooms &amp; Rates</a></li>
+          <li><a href="about-us.html">About Us &amp; Catering</a></li>
+          <li><a href="contacts.html">Contact &amp; Location</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/254717944229" class="wa-footer-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.849L.057 23.535a.563.563 0 00.677.677l5.687-1.471A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.027-1.383l-.36-.214-3.742.968.993-3.626-.236-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+            +254 717 944 229
+          </a></li>
+          <li><a href="contacts.html">Kimana, Kajiado County</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="yr"></span> Sironosim Gardens Hotel. All rights reserved.</span>
+      <a href="https://wa.me/254717944229" target="_blank" rel="noopener" class="wa-footer-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.849L.057 23.535a.563.563 0 00.677.677l5.687-1.471A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.027-1.383l-.36-.214-3.742.968.993-3.626-.236-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="whatsapp.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
